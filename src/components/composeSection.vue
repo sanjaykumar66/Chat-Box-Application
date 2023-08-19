@@ -16,9 +16,12 @@ function resizeTextarea(){
 }
 
 function sendMessage(){
-  emit('submit')
+  if(message.value!==''){
+    emit('submit')
   message.value = '';
   textareaHeight.value = 16;
+  }
+  
 }
 
 </script>
