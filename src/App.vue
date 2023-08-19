@@ -11,7 +11,7 @@ provide('currentUser', currentUser)
 const message = ref('');
 
 function sendMessage(){
-
+  message.value = message.value.replace('\\n','<br>')
   store.dispatch('sendReply',message.value);
   setTimeout(()=>{
     store.dispatch('getReply','I was working in the garden and just thought of you!')

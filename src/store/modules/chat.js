@@ -24,7 +24,7 @@ const actions = {
             commit('SET_CURRENTUSER', JSON.parse(currentUser));
         },500)
     },
-    sendReply({commit},message,from){
+    sendReply({commit},message){
         return new Promise((resolve) => {
             setTimeout(() => {
                 const currentDate = new Date();
